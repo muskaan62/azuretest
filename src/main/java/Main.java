@@ -37,10 +37,6 @@ public class Main {
                 .acquireToken(ClientCredentialParameters.builder(scopes).build());
 
         IAuthenticationResult authenticationResult = future.get();
-        System.out.println(authenticationResult.scopes() + "\n"
-        + authenticationResult.account() + "\n"
-        + authenticationResult.tenantProfile() + "\n"
-        + authenticationResult.expiresOnDate());
         String accessToken = authenticationResult.accessToken();
         System.out.println("Access Token: " + accessToken);
         if (false) {
